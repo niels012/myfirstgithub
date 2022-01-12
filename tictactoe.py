@@ -1,7 +1,6 @@
 def main ():
     current_player = "X"
     numlist = create_num()
-    # board(num)
 
     while winner(numlist) != True :
         board(numlist)
@@ -37,15 +36,15 @@ def move(player, digits):
     desired_move = int(input(f"{player}'s turn to choose a square (1-9): "))
     digits[desired_move - 1] = player
 
-def winner(board):
-    return (board[0] == board[1] == board[2] or
-            board[3] == board[4] == board[5] or
-            board[6] == board[7] == board[8] or
-            board[0] == board[3] == board[6] or
-            board[1] == board[4] == board[7] or
-            board[2] == board[5] == board[8] or
-            board[0] == board[4] == board[8] or
-            board[2] == board[4] == board[6])
+def winner(num):
+    return (num[0] == num[1] == num[2] or
+            num[3] == num[4] == num[5] or
+            num[6] == num[7] == num[8] or
+            num[0] == num[3] == num[6] or
+            num[1] == num[4] == num[7] or
+            num[2] == num[5] == num[8] or
+            num[0] == num[4] == num[8] or
+            num[2] == num[4] == num[6])
 
 if __name__ == "__main__":
     main()
